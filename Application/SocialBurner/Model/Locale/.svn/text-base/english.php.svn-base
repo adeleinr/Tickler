@@ -1,0 +1,64 @@
+<?php
+
+$locale = Array();
+
+// Service
+
+$locale['FORM_TITLE'] = 'Save a new service';
+$locale['SERVICE_NAME_TITLE'] = 'Service Name:';
+
+
+// Registration
+
+//-------Common Fields----------//
+$locale['REGISTER_FORM_TITLE'] = 'Signup';
+$locale['STREET_TITLE'] = 'Street';
+$locale['CITY_TITLE'] = 'City';
+$locale['STATE_TITLE'] = 'State';
+$locale['ZIP_TITLE'] = 'Zipcode';
+$locale['PHONE_TITLE'] = 'Phone';
+$locale['EMAIL_TITLE'] = 'Email';
+$locale['URL_TITLE'] = 'Url';
+$locale['USERNAME_TITLE'] = 'Username';
+$locale['PASSWORD_TITLE'] = 'Password';
+
+
+
+// Provider Registration
+
+$locale['BUSINESS_NAME_TITLE'] = 'Business or Organization Name';
+$locale['REGISTER_CHECK_FORM_TITLE'] = 'Search Your Business Name';
+
+
+// Provider Push Event
+
+$locale['PUSH_EVENT_FORM_TITLE'] = 'Send Event To Users';
+$locale['EVENT_NAME_TITLE'] = 'Event Name';
+$locale['EVENT_DESCRIPTION_TITLE'] = 'Event Information';
+
+// Login 
+
+$locale['LOGIN_FORM_TITLE'] = 'Login';
+
+// Search
+
+$locale['SEARCH_FORM_TITLE'] = 'Search Buckets';
+
+// Yelp, Google API Search
+$locale['SEARCH_YELP_BUTTON_TITLE'] = "Yelp";
+$locale['SEARCH_YAHOO_BUTTON_TITLE'] = "Yahoo";
+$locale['SERVICE_LOCATION_TITLE'] = "Location";
+
+// Client Login
+
+$locale['NAME_TITLE'] = 'Name';
+
+// Client Profile
+
+$locale['PROFILE_PAGE_TITLE'] = 'My Service Bucket';
+
+
+
+
+
+?>

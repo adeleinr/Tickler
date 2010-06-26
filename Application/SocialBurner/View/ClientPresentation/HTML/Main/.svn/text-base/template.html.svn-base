@@ -1,0 +1,127 @@
+<html>
+<head>
+	
+	<!-- Framework CSS -->  
+	<link rel="stylesheet" href="/View/ClientPresentation/CSS/Blueprint/screen.css" type="text/css" media="screen, projection" />  
+	<link rel="stylesheet" href="/View/ClientPresentation/CSS/Blueprint/print.css" type="text/css" media="print" />  
+	<!--[if IE]><link rel="stylesheet" href="/View/ClientPresentation/CSS/Blueprint/ie.css" type="text/css" media="screen, projection" /><![endif]-->  
+
+	<link rel="stylesheet" href="/View/ClientPresentation/CSS/global.lib.css" type="text/css"/> 
+	
+
+
+</head>
+
+<body>
+	<div class="container">
+	
+	  <div id="header" class="span-24 last">
+	  	<div id="menu">
+			  <ul>
+			  	<li><a href="">username@gmail.com</a></li>
+			  	<li><a href="/client_profile" >MyClouds</a></li>
+			  	<li><a href="/client_logout">Logout</a></li>
+			  </ul>
+		</div>
+		<div id="logo" class="span-24 last">
+	    	<h1>LOGO</h1>
+	  	</div>
+	  	
+	  </div>
+	  <hr />
+	  
+	
+	  	  
+	  <div id="mainContent" class="span-24 last">
+	  	<h2>Your Service Clouds</h2>
+	  	<div id="bucket" class="span-8">
+		    <h3>Geek in the Bay Area</h3>
+			<div id="service">
+					<div id="edit">Edit</div>
+				    <h1>MOVING HELP </h1>
+				    <ul>
+				    	<li><a href="https://www.movinghelp.com"></a></li>
+				    	<li>(405) 345 1234 <a href="maps.google.com">maps.google.com</a><a href="">Reviews</a></li>
+				    </ul>	    
+			</div>
+			
+			<div id="service">
+					<div id="edit">Edit</div>
+				    <h1>MOVING HELP </h1>
+				    <ul>
+				    	<li><a href="https://www.movinghelp.com"></a></li>
+				    	<li>(405) 345 1234 <a href="maps.google.com">maps.google.com</a><a href="">Reviews</a></li>
+				    </ul>	    
+			</div>
+		</div>
+		<div id="bucket" class="span-15 last">
+		    <h3>Geek in the Bay Area</h3>
+			<div id="service">
+					<div id="edit">Edit</div>
+				    <h1>MOVING HELP </h1>
+				    <ul>
+				    	<li><a href="https://www.movinghelp.com"></a></li>
+				    	<li>(405) 345 1234 <a href="maps.google.com">maps.google.com</a><a href="">Reviews</a></li>
+				    </ul>	    
+			</div>
+			
+			<div id="service">
+					<div id="edit">Edit</div>
+				    <h1>MOVING HELP </h1>
+				    <ul>
+				    	<li><a href="https://www.movinghelp.com"></a></li>
+				    	<li>(405) 345 1234 <a href="maps.google.com">maps.google.com</a><a href="">Reviews</a></li>
+				    </ul>	    
+			</div>
+			
+			<div id="service">
+					<div id="edit">Edit</div>
+				    <h1>MOVING HELP </h1>
+				    <ul>
+				    	<li><a href="https://www.movinghelp.com"></a></li>
+				    	<li>(405) 345 1234 <a href="maps.google.com">maps.google.com</a><a href="">Reviews</a></li>
+				    </ul>	    
+			</div>
+		</div>
+		
+		
+		 
+	  </div>
+		
+  	  
+	   
+		<div id="footer-menu" class="span-24 last"> 
+		   	<div class="span-6">
+		   		<h4>ServiceBucket</h4>
+		   		<ul>
+		   			<li><a href="">Home</a></li>
+		   			<li><a href="">Abous Us</a></li>
+		   			<li><a href="">Terms</a></li>
+				</ul>
+		   	</div>
+			<div class="span-6">
+	 		<h4>Community</h4>
+	 		<ul>
+	 			<li><a href="">Blog</a></li>
+	 			<li><a href="">Facebook</a></li>
+	 			<li><a href="">Twitter</a></li>
+			</ul>
+	 		</div>
+			<div class="span-11 last">
+	 		<h4>Support</h4>
+	 		<ul>
+	 			<li><a href="">Help</a></li>
+	 			<li><a href="">Feedback</a></li>
+	 			<li><a href="">Contact Us</a></li>
+			</ul>
+	 		</div>
+		</div>
+		
+	
+	</div>
+	
+
+</body>
+
+
+</html>

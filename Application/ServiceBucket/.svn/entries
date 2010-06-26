@@ -1,0 +1,71 @@
+10
+
+dir
+93
+svn+ssh://imac/usr/local/svn/service_bucket/trunk
+svn+ssh://imac/usr/local/svn/service_bucket
+
+
+
+2009-11-30T04:47:57.454880Z
+93
+adeleinr
+has-props
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+f1710ef2-e2e2-47dc-b795-897d1c9eaedd
+
+.htaccess
+file
+
+
+
+
+2009-11-30T04:19:38.000000Z
+3dbed9d653a7069e5d35fd51826019ab
+2009-11-30T04:42:13.549423Z
+92
+adeleinr
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+2153
+
+Controllers
+dir
+
+Model
+dir
+
+View
+dir
+

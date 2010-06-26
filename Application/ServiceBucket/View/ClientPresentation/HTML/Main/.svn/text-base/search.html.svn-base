@@ -1,0 +1,129 @@
+<html>
+<head>
+	
+	<!-- Framework CSS -->  
+	<link rel="stylesheet" href="/View/ClientPresentation/CSS/Blueprint/screen.css" type="text/css" media="screen, projection" />  
+	<link rel="stylesheet" href="/View/ClientPresentation/CSS/Blueprint/print.css" type="text/css" media="print" />  
+	<!--[if IE]><link rel="stylesheet" href="/View/ClientPresentation/CSS/Blueprint/ie.css" type="text/css" media="screen, projection" /><![endif]-->  
+
+	<link rel="stylesheet" href="/View/ClientPresentation/CSS/global.lib.css" type="text/css"/> 
+	
+
+
+</head>
+
+<body>
+	<div class="container">
+	
+		<div id="header" class="span-24 last">
+		 	<div id="menu">
+			  <ul>
+			  	<li><a href="">username@gmail.com</a></li>
+			  	<li><a href="/client_profile" >MyClouds</a></li>
+			  	<li><a href="/client_logout">Logout</a></li>
+			  </ul>
+			</div>
+			<div id="logo" class="span-24 last">
+		   		<h1>Cloud</h1>
+		 	</div>
+	 	</div>
+	 	<hr />
+	  
+	
+	  	  
+		<div id="mainContent" class="span-24 last">
+			<h2>Find a service cloud</h2>
+			<div id="bucket-search">
+				<form action="" method="get">
+					<input type="text" name="fname" />
+					<input class="button" type="submit" value="search" />
+				</form>
+			</div>
+		  	
+			<div id="bucket-min" class="span-24 last">
+			    <div class="span-4">
+			    	<img src="/View/ClientPresentation/Images/girl.png"/><br>
+			    	<a href="">by username</a>
+			    </div>
+				<div class="span-6" id="service-list">
+					<h3>Geek in the Bay Area</h3>
+					<ul>
+						<li>Moving Help</li>
+						<li>Moving Help</li>
+						<li>Moving Help</li>
+						<li>more...</li>
+						
+					</ul>    
+				</div>
+				<div class="span-3 last" id="service-list">
+					<a href=""/>
+						<img class="left" src="/View/ClientPresentation/Images/add_small.png"/>
+					</a>
+	   				
+				</div>
+			</div>
+	
+			<div id="bucket-min" class="span-24 last">
+			    <div class="span-4">
+			    	<img src="/View/ClientPresentation/Images/girl.png"/><br>
+			    	<a href="">by username</a>
+			    </div>
+				<div class="span-6" id="service-list">
+					<h3>Geek in the Bay Area</h3>
+					<ul>
+						<li>Moving Help</li>
+						<li>Moving Help</li>
+						<li>Moving Help</li>
+						<li>more...</li>
+						
+					</ul>    
+				</div>
+				<div class="span-3 last" id="service-list">
+					<a href=""/>
+						<img class="left" src="/View/ClientPresentation/Images/add_small.png"/>
+					</a>
+	   				
+				</div>
+			</div>
+	
+	 
+		  </div><!-- END OF MAIN CONTENT -->
+		
+  	  
+	   
+		<div id="footer-menu" class="span-24 last"> 
+		   	<div class="span-6">
+		   		<h4>ServiceBucket</h4>
+		   		<ul>
+		   			<li><a href="">Home</a></li>
+		   			<li><a href="">Abous Us</a></li>
+		   			<li><a href="">Terms</a></li>
+				</ul>
+		   	</div>
+			<div class="span-6">
+				<h4>Community</h4>
+				<ul>
+					<li><a href="">Blog</a></li>
+					<li><a href="">Facebook</a></li>
+					<li><a href="">Twitter</a></li>
+			</ul>
+				</div>
+			<div class="span-11 last">
+				<h4>Support</h4>
+				<ul>
+					<li><a href="">Help</a></li>
+					<li><a href="">Feedback</a></li>
+					<li><a href="">Contact Us</a></li>
+			</ul>
+				</div>
+		</div><!-- END OF FOOTER -->
+		
+	
+	</div><!-- END CONTAINER -->
+
+	
+
+</body>
+
+
+</html>

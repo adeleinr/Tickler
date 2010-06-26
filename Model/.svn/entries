@@ -1,0 +1,43 @@
+10
+
+dir
+33
+svn+ssh://imac/usr/local/svn/uranus/trunk/Model
+svn+ssh://imac/usr/local/svn/uranus
+
+
+
+2009-10-31T09:52:48.402640Z
+32
+orlandopozo
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+eb0e97e8-f3c0-435a-b8bd-f6b439f84977
+
+Config
+dir
+
+Database
+dir
+
+Locale
+dir
+
+Profile
+dir
+
+Template
+dir
+

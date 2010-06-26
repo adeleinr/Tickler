@@ -1,0 +1,43 @@
+10
+
+dir
+90
+svn+ssh://adeleinr@imac/usr/local/svn/service_bucket/trunk/View/ClientPresentation/HTML
+svn+ssh://adeleinr@imac/usr/local/svn/service_bucket
+
+
+
+2009-11-30T01:28:34.842526Z
+90
+opozo
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+f1710ef2-e2e2-47dc-b795-897d1c9eaedd
+
+Bucket
+dir
+
+Client
+dir
+
+Main
+dir
+
+Provider
+dir
+
+Service
+dir
+

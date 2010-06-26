@@ -1,0 +1,9 @@
+fieldset
+{
+	width: 200px;
+}
+
+#fieldContainer
+{
+	text-align: center;
+}

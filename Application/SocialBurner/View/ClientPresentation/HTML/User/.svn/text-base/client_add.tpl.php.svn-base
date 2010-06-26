@@ -1,0 +1,100 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title><?= $REGISTER_FORM_TITLE ?></title>
+	<?=$CSS_INCLUDES?>
+</head>
+<body>
+	<?=$HEADER ?>
+	<div align='left'>
+		<form id='<?= $PROFILE_NAME ?>' name='<?= $PROFILE_NAME ?>' action='<?= $REGISTER_FORM ?>' method='POST'>
+			<?= $MESSAGE ?>
+			<fieldset>
+				<legend ><?= $REGISTER_FORM_TITLE ?></legend>
+					<div id="fieldContainer">
+						<div>
+							<label for="NAME">
+								<?= $NAME_TITLE ?>
+							</label>
+							<div>
+								<?= $CLIENT_NAME ?>
+							</div>
+						</div>
+						
+						<div>
+							<label for="STREET">
+								<?= $STREET_TITLE ?>
+							</label>
+							<div>
+								<?= $CLIENT_STREET ?>
+							</div>
+						</div>
+			
+						<div>
+							<label for="CITY">
+								<?= $CITY_TITLE ?>
+							</label>
+							<div class="field">
+								<?= $CLIENT_CITY ?>
+							</div>
+						</div>
+						<div>
+							<label for="STATE">
+								<?= $STATE_TITLE ?>
+							</label>
+							<div class="field">
+								<?= $CLIENT_STATE ?>
+							</div>
+						</div>
+						<div>
+							<label for="ZIP">
+								<?= $ZIP_TITLE ?>
+							</label>
+							<div class="field">
+								<?= $CLIENT_ZIP ?>
+							</div>
+						
+						</div>
+						<div>
+							<label for="EMAIL">
+								<?= $EMAIL_TITLE ?>
+							</label>
+							<div class="field">
+								<?= $CLIENT_EMAIL ?>
+							</div>
+						</div>			
+						<div>
+							<label for="USERNAME">
+								<?= $USERNAME_TITLE ?>
+							</label>
+							<div class="field">
+								<?= $CLIENT_USERNAME ?>
+							</div>
+						</div>
+						
+						<div>
+							<label for="PASSWORD">
+								<?= $PASSWORD_TITLE ?>
+							</label>
+							<div class="field">
+								<?= $CLIENT_PASSWORD ?>
+							</div>
+						</div>
+						
+						
+					</div>
+					<?= $BUTTON_SUBMIT ?>
+					<?= $BUTTON_RESET ?>
+			</fieldset>
+		
+		</form>
+	
+	</div>
+	
+	<script type="text/javascript">
+		var profileName = '<?= $PROFILE_NAME ?>';
+	</script>
+	<?=$FOOTER ?>
+</body>
+</html>

@@ -1,0 +1,24 @@
+RewriteEngine on
+
+RewriteRule ^$ /Controllers/Main/main_controller.php?action=home [L]
+RewriteRule ^demo/business$ /Controllers/Main/main_controller.php?action=business [L]
+RewriteRule ^demo/push_event$ /Controllers/Main/main_controller.php?action=push_event [L]
+RewriteRule ^demo/push_event_data$ /Controllers/Main/main_controller.php?action=push_event_data [L]
+
+RewriteRule ^success$ /Controllers/Main/success.php [L]
+
+RewriteRule ^search?$ /Controllers/Service/service_controller.php?action=search [L]
+RewriteRule ^search_result?$ /Controllers/Service/service_controller.php?action=search_result [L]
+RewriteRule ^save?$ /Controllers/Service/service_controller.php?action=save [L]
+RewriteRule ^bookmarklet?$ /Controllers/Service/service_controller.php?action=bookmarklet [L]
+RewriteRule ^search_yelp?$ /Controllers/Service/service_controller.php?action=search_yelp [L]
+
+
+
+RewriteRule ^user_add?$ /Controllers/Client/client_controller.php?action=add_user [L]
+RewriteRule ^client_save?$ /Controllers/Client/client_controller.php?action=save_user [L]
+RewriteRule ^client_login?$ /Controllers/Client/client_controller.php?action=login_client [L]
+RewriteRule ^client_logout?$ /Controllers/Client/client_controller.php?action=logout_client [L]
+RewriteRule ^client_profile?$ /Controllers/Client/client_controller.php?action=profile_client [QSA]
+RewriteRule ^client_bucket_change?$ /Controllers/Client/client_controller.php?action=change_bucket [L]
+

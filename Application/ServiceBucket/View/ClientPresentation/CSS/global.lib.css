@@ -1,0 +1,174 @@
+@CHARSET "UTF-8";
+
+	body, input,textarea,select { font-family: "lucida grande", "Segoe UI", arial, verdana, "lucida sans unicode", tahoma, sans-serif; font-size: 10pt; color: #444; }
+	h1, h2 {color: #348dd3;}
+	hr { 
+		background-color: #e8f5f8;
+		height: 0.5px;
+	}
+
+
+	#logo {
+	 margin-top: 10px;
+	}
+	#logo a{
+		text-decoration: none;
+		color: #348dd3;;	
+	}
+
+	
+	#menu-right {
+		float: right;
+	}
+
+	#menu-right ul {
+		margin: 0;
+		padding: 15px 0 0 0;
+		list-style: none;
+	}
+	
+	#menu-right li {
+		display: inline;
+	}
+	
+	#menu-right a {
+		display: block;
+		float: left;
+		margin-left: 30px;
+		padding: 2px;
+		text-decoration: none;
+		font-size: 16px;
+		color: #348dd3ff;
+	}
+	
+	#menu-left {
+		float: left;
+	}
+
+	#menu-left ul {
+		margin: 0;
+		padding: 15px 0 0 0;
+		list-style: none;
+	}
+	
+	#menu-left li {
+		display: inline;
+	}
+	
+	#menu-left a {
+		display: block;
+		float: left;
+		margin-left: 0px;
+		padding: 2px;
+		text-decoration: none;
+		font-size: 16px;
+		color: #348dd3ff;
+	}
+	
+	#footer-menu{ 
+		margin: 20px 20px 20px 0;
+		align:center;
+		border-top: 0.5px solid #e8f5f8;
+		padding: 10px 5px 10px 5px;
+	}
+	
+	#footer-menu ul {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+	}
+	
+	#footer-menu a {
+		display: block;
+		text-decoration: none;
+		color:#555753;
+	}
+	#footer-menu h4{
+
+		color:#555753;
+		font-weight: bold;
+		margin-bottom: 0;
+	
+	}
+	
+	/*#service{
+		margin-bottom: 15px;
+		padding: 5px 5px 5px 5px;
+		border-bottom: 1px solid #d3d7cf;
+		width:300px;
+		height:50px;
+		background: #e8f5f8;
+		
+	}
+	#service h1{
+	
+		font-weight: bold;	
+		font-size: 14px;
+		margin-bottom:-12px;	
+	}
+	#service ul {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		color: #555753;
+	}
+	
+	#service a {
+		padding: 0 5px 0 0;
+		margin-top:0;
+	}
+	#service-number{
+		color: #babdb6;
+		font-size:14px;
+		font-weight: bold;
+	
+	}*/
+	
+	#edit{
+	
+		float:right;
+	}
+
+	
+	
+	
+	#service-list ul{
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		color: #555753;
+	}
+	#service-list a{
+	
+		padding: 0 5px 0 0;
+		margin:0 0 0 0;
+	}
+	#bucket-min{
+		margin: 5px 5px 5px 5px;
+		padding: 5px 0px 5px 0px;
+		border-bottom: 0.5px solid #e8f5f8;
+
+	
+	}
+	#bucket-min h3{
+	
+		font-weight: bold;	
+		font-size: 12px;
+		margin-bottom:0px;	
+	}
+	
+	button{
+	
+		background-color: #348dd3;
+	    border-color: #a3c8e9 #4379c0 #4379c0 #a3c8e9;
+	    border-style: solid;
+	    border-width: 1px;
+	    color: #fff;
+	    margin: 0;
+	}
+	
+	#error{
+		background-color: #FFCCCC;
+		width: 500px;
+	
+	}

@@ -1,0 +1,119 @@
+<html>
+<head>
+	<title>Push Event (Static)</title>
+	<script src="http://uranus/View/ClientPresentation/JS/jQuery/jquery-1.3.2.js"></script>
+	<script>
+		var ServiceBucket = ServiceBucket || {};
+		
+		ServiceBucket = {
+			"pullEvents" : function() {
+				setInterval(function() {
+					$.ajax({
+						type: "GET",
+						url: "http://service_bucket/demo/push_event_data",
+						dataType: "json",
+						success: function(json){
+							for (service in json) {
+								for (var i = 0, len = json[service].length; i < len; ++i)
+								{
+									var eventHTML = "";
+									eventHTML += "<div id='event_" + json[service][i]['ID'] + "' class='event'>";
+									eventHTML += "<div class='content'>";
+									eventHTML += json[service][i]['EVENT'];
+									eventHTML += "</div>";
+									eventHTML += "</div>";
+									$("#" + service + " .events").append(eventHTML);
+									$("#event_" + json[service][i]['ID']).slideDown("slow");
+								}
+							}
+						}
+					});
+				}, "5000");
+			}
+		};
+		
+		$(document).ready(function() {
+			ServiceBucket.pullEvents();
+		});
+	</script>
+	<link href="http://service_bucket/View/ClientPresentation/CSS/global.lib.css" rel="stylesheet" />
+	<style>
+		.round
+		{
+			-moz-border-radius-bottomleft:10px;
+			-moz-border-radius-bottomright:10px;
+			-moz-border-radius-topleft:10px;
+			-moz-border-radius-topright:10px;
+			-webkit-border-bottom-left-radius: 10px 10px;
+			-webkit-border-bottom-right-radius: 10px 10px;
+			-webkit-border-top-left-radius: 10px 10px;
+			-webkit-border-top-right-radius: 10px 10px;
+			background-color: #CCC;
+			padding:15px;
+			width: 200px;
+		}
+		
+		.service
+		{
+			overflow: hidden;
+			margin-bottom: 20px;
+		}
+		
+		.events
+		{
+			margin-left: 16px;		
+		}
+	
+		.event
+		{
+			display: none;
+			-moz-background-clip: border;
+			-moz-background-inline-policy: continuous;
+			-moz-background-origin: padding;
+			background: transparent url(/View/ClientPresentation/Images/comment.png) no-repeat scroll left top;
+		}
+			
+		.content
+		{
+			margin-left: 21px;
+		}
+	</style>
+</head>
+<body>
+	<div id="Food_SERVICE_0" class="service">
+		<div class="title">
+			Food SERVICE 0
+		</div>
+		<div class="events">
+			<!--
+			<div id="event_1" class="event">
+				<div class="content">
+					Event 1 of Food SERVICE 0
+				</div>
+			</div>
+			<div id="event_2" class="event">
+				<div class="content">
+					Event 2 of Food SERVICE 0
+				</div>
+			</div>
+			-->
+		</div>
+	</div>
+	
+	<div id="Food_SERVICE_1" class="service">
+		<div class="title">
+			Food SERVICE 1
+		</div>
+		<div class="events">
+		</div>
+	</div>
+	
+	<div id="Food_SERVICE_2" class="service">
+		<div class="title">
+			Food SERVICE 2
+		</div>
+		<div class="events">
+		</div>
+	</div>
+</body>
+</html>

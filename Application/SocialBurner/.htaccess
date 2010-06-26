@@ -1,0 +1,14 @@
+RewriteEngine on
+
+RewriteRule ^$ /Controllers/Main/main_controller.php?action=home [L]
+
+
+RewriteRule ^user_add?$ /Controllers/User/user_controller.php?action=add_user [L]
+RewriteRule ^user_save?$ /Controllers/User/user_controller.php?action=save_user [L]
+RewriteRule ^user_login?$ /Controllers/User/user_controller.php?action=login_user [L]
+RewriteRule ^user_logout?$ /Controllers/User/user_controller.php?action=logout_user [L]
+RewriteRule ^user_profile?$ /Controllers/User/user_controller.php?action=profile_user [QSA]
+RewriteRule ^user_bucket_change?$ /Controllers/user/user_controller.php?action=change_bucket [L]
+
+RewriteRule ^proxy_redirect?$ /Controllers/Proxy/proxy_controller.php?action=proxy_redirect [QSA]
+

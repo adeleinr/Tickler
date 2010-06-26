@@ -1,0 +1,44 @@
+#bucket-search{
+	margin-bottom:15px;
+
+}
+
+div.bucket
+{
+	width :370px;
+	height : 200px;
+	margin :5px;
+}
+
+div.service-list
+{
+}
+
+div.services
+{
+	border-bottom: 1px solid #d3d7cf;
+	font-size: 0.75em;
+}
+
+div.bucket-add
+{
+	width: 50px;
+	align: right;
+}
+
+.round
+{
+	-moz-border-radius-bottomleft:10px;
+	-moz-border-radius-bottomright:10px;
+	-moz-border-radius-topleft:10px;
+	-moz-border-radius-topright:10px;
+	-webkit-border-bottom-left-radius: 10px 10px;
+	-webkit-border-bottom-right-radius: 10px 10px;
+	-webkit-border-top-left-radius: 10px 10px;
+	-webkit-border-top-right-radius: 10px 10px;
+	background-color: #e8f5f8;
+	padding:10px;
+	
+}
+
+

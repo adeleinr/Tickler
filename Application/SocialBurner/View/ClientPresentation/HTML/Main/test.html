@@ -1,0 +1,209 @@
+<style type="text/css">
+		body { font-size: 62.5%; }
+		label, input { display:block; }
+		input.text { margin-bottom:12px; width:95%; padding: .4em; }
+		fieldset { padding:0; border:0; margin-top:25px; }
+		h1 { font-size: 1.2em; margin: .6em 0; }
+		div#users-contain {  width: 350px; margin: 20px 0; }
+		div#users-contain table { margin: 1em 0; border-collapse: collapse; width: 100%; }
+		div#users-contain table td, div#users-contain table th { border: 1px solid #eee; padding: .6em 10px; text-align: left; }
+		.ui-button { outline: 0; margin:0; padding: .4em 1em .5em; text-decoration:none;  !important; cursor:pointer; position: relative; text-align: center; }
+		.ui-dialog .ui-state-highlight, .ui-dialog .ui-state-error { padding: .3em;  }
+		
+		
+</style>
+<link type="text/css" href="http://uranus/View/ClientPresentation/JS/jQuery-ui/css/redmond/jquery-ui-1.7.2.custom.css" rel="Stylesheet" />	
+<script type="text/javascript" src="http://uranus/View/ClientPresentation/JS/jQuery/jquery-1.3.2.js"></script>
+<script type="text/javascript" src="http://uranus/View/ClientPresentation/JS/jQuery-ui/development-bundle/ui/jquery-ui-1.7.2.custom.js"></script>
+	
+<script type="text/javascript">
+	$(function() {
+		
+		var bucketName = $("#bucketName"),
+			zipcode = $("#zipcode"),
+			allFields = $([]).add(bucketName).add(zipcode),
+			tips = $("#validateTips");
+
+		function updateTips(t) {
+			tips.text(t).effect("highlight",{},1500);
+		}
+
+		function checkLength(o,n,min,max) {
+
+			if ( o.val().length > max || o.val().length < min ) {
+				o.addClass('ui-state-error');
+				updateTips("Length of " + n + " must be between "+min+" and "+max+".");
+				return false;
+			} else {
+				return true;
+			}
+
+		}
+
+		function checkRegexp(o,regexp,n) {
+
+			if ( !( regexp.test( o.val() ) ) ) {
+				o.addClass('ui-state-error');
+				updateTips(n);
+				return false;
+			} else {
+				return true;
+			}
+
+		}
+
+		//Singleton/Module
+		var ServiceBucket = ServiceBucket || {};
+			
+		$(".same").dialog({
+			bgiframe: true,
+			autoOpen: false,
+			height: 300,
+			modal: true,
+			buttons: {
+				'Create an account': function() {
+					var bValid = true;
+					allFields.removeClass('ui-state-error');
+
+					bValid = bValid && checkLength(bucketName,"Bucket name",3,16);
+					bValid = bValid && checkLength(zipcode,"Zipcode",5,5);
+
+					bValid = bValid && checkRegexp(bucketName,/^[a-z]([0-9a-z_])+$/i,"Bucket name may consist of a-z, 0-9, underscores, begin with a letter.");
+					// From jquery.validate.js (by joern), contributed by Scott Gonzalez: http://projects.scottsplayground.com/email_address_validation/
+					bValid = bValid && checkRegexp(zipcode,/^([0-9])+$/,"Zipcode only allows : 0-9");
+					
+					if (bValid) {
+						$('#users tbody').append('<tr>' +
+							'<td>' + bucketName.val() + '</td>' + 
+							'<td>' + zipcode.val() + '</td>' + 
+							'</tr>'); 
+
+						var data = '{ "BUCKET_ID: "BUCKET_NAME": "'+bucketName.val()+'", "BUCKET_ZIP":"'+zipcode.val()+'"}';
+
+						var response = $.ajax({
+							type: "POST",
+							url: "/bucket_edit",
+							dataType: "json",
+							data: "BUCKET_INFO_JSON="+data,
+							async: false						
+							
+						}).responseText;
+
+						alert(response);
+						
+						$(this).dialog('close');
+					}
+				},
+				Cancel: function() {
+					$(this).dialog('close');
+				}
+			},
+			close: function() {
+				allFields.val('').removeClass('ui-state-error');
+			}
+		});
+		
+		
+		
+		$('#save-bucket').click(function() {
+			$('.same').dialog('open');
+		})
+		.hover(
+			function(){ 
+				$(this).addClass("ui-state-hover"); 
+			},
+			function(){ 
+				$(this).removeClass("ui-state-hover"); 
+			}
+		).mousedown(function(){
+			$(this).addClass("ui-state-active"); 
+		})
+		.mouseup(function(){
+				$(this).removeClass("ui-state-active");
+		});
+
+	});
+</script>
+
+
+
+<div class="demo">
+
+<div id="dialog" class="same" title="Create new user">
+	<p id="validateTips">All form fields are required.</p>
+
+	<form>
+	<fieldset>
+		<label for="bucketName">Bucket Name</label>
+		<input type="text" name="bucketName" id="bucketName" class="text ui-widget-content ui-corner-all" />
+		<label for="zipcode">Zipcode</label>
+		<input type="text" name="zipcode" id="zipcode" value="" class="text ui-widget-content ui-corner-all" />
+	</fieldset>
+	</form>
+	
+	
+</div>
+
+
+<div id="users-contain" class="ui-widget">
+
+		<h1>Existing Users:</h1>
+
+
+	<table id="users" class="ui-widget ui-widget-content">
+		<thead>
+			<tr class="ui-widget-header ">
+				<th>Name</th>
+				<th>Email</th>
+				<th>Password</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>John Doe</td>
+				<td>john.doe@example.com</td>
+				<td>johndoe1</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+<button id="save-bucket" class="ui-button ui-state-default ui-corner-all">Create new user</button>
+
+</div><!-- End demo -->
+
+<div class="demo-description">
+
+<p>Use a modal dialog to require that the user enter data during a multi-step process.  Embed form markup in the content area, set the <code>modal</code> option to true, and specify primary and secondary user actions with the <code>buttons</code> option.</p>
+
+</div><!-- End demo-description -->
+
+<!-- Test case with 2 dialogs -->
+<div id="orlando" class="same">
+
+	<p id="validateTips">All form fields are required.</p>
+
+	<form>
+	<fieldset>
+		<label for="bucketName">First Name</label>
+		<input type="text" name="bucketName" id="bucketName" class="text ui-widget-content ui-corner-all" />
+		<label for="zipcode">Zipcode</label>
+		<input type="text" name="zipcode" id="zipcode" value="" class="text ui-widget-content ui-corner-all" />
+	</fieldset>
+	</form>
+
+</div>
+<script>
+
+
+/*$("#orlando").dialog({
+	bgiframe: true,
+	autoOpen: false,
+	height: 300,
+	modal: true 
+});	
+*/
+
+
+//$('#orlando').dialog('open');
+
+</script>

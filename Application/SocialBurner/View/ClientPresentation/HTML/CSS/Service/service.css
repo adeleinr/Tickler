@@ -1,0 +1,39 @@
+fieldset
+{
+	width: 1000px;
+}
+
+#fieldContainer
+{
+	text-align: center;
+}
+
+#businessContainer
+{
+	border-width: 1px;
+	border-style: solid;
+	border-color: black;
+	margin: 4;
+	padding: 4;
+}
+
+#serviceNameWidth
+{
+	width: 100px;
+}
+
+#service
+{
+
+	margin-top: 10px;
+}
+
+div.yelp-service 
+{
+	padding: 4px;
+	
+}
+div.yelp-service:hover
+{
+	background-color: #e8f5f8;
+}

@@ -1,0 +1,37 @@
+10
+
+dir
+90
+svn+ssh://adeleinr@imac/usr/local/svn/service_bucket/trunk/View/ClientPresentation/JS/Tool
+svn+ssh://adeleinr@imac/usr/local/svn/service_bucket
+
+
+
+2009-10-31T08:05:42.152864Z
+55
+opozo
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+f1710ef2-e2e2-47dc-b795-897d1c9eaedd
+
+Compressor
+dir
+
+Microformat
+dir
+
+Querystring
+dir
+

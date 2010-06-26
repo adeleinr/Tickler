@@ -1,0 +1,46 @@
+<?php
+
+require 'Uranus/Framework/Model/Database/Database.class.php';
+
+$database = new Database(Config::get("HOSTNAME"), Config::get("USERNAME"), Config::get("PASSWORD"), Config::get("DATABASE"));
+
+$unencryptedPass = $_POST['CLIENT_PASSWORD'];
+
+$_POST['CLIENT_PASSWORD'] = md5(addslashes($_POST['CLIENT_PASSWORD']));
+
+$recordId = $profile->saveData($_POST, false);
+
+if ( $recordId > 0)
+{
+	
+	Authentication::init();
+	
+	if ( isset($_POST['CLIENT_USERNAME']) && isset($_POST['CLIENT_PASSWORD']) )
+	{ 
+		$username = $_POST['CLIENT_USERNAME'];
+		$password = $unencryptedPass;
+		$profileName = $profile->profileMetadata['PROFILE_NAME'];
+				
+		$userId = Authentication::login($username, $password, $_SESSION, $profileName, $database);
+		
+		if( $userId > 0 )
+		{
+			header("Location: /client_profile");
+		    exit;		
+		}
+		else
+		{
+			header("Location: /client_login");
+		    exit;
+		}   
+	}
+}
+else
+{
+	header("Location: /client_add");
+}
+
+
+
+?>
+
